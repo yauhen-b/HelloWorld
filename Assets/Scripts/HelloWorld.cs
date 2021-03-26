@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HelloWorld : MonoBehaviour
 {
+    public Text label;
     public int min = 1;
     [SerializeField]
     private int max = 1000;
@@ -33,6 +35,7 @@ public class HelloWorld : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
+            label.text = "Конец";
             print(message:"Конец");
         }
     }
@@ -40,6 +43,7 @@ public class HelloWorld : MonoBehaviour
     private void UpdateGuess()
     {
         guess = (min + max) / 2;
+        label.text = "Твоё число равно " + guess + "?";
         print(message:"Твоё число равно " + guess + "?");
     }
 }
