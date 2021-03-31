@@ -160,9 +160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b574ff161f58e4b9efa46352a2b291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1196849773}
+  label: {fileID: 1196849773}
   min: 1
   max: 1000
+  count: 0
+  guess: 500
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
