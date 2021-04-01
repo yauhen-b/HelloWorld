@@ -32,7 +32,9 @@ public class HomeWork2 : MonoBehaviour
 {
     public Text label;
     public int sum;
+
     public int count;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,34 +58,42 @@ public class HomeWork2 : MonoBehaviour
             {
                 UpdateGame(1);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
             {
                 UpdateGame(2);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
             {
                 UpdateGame(3);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
             {
                 UpdateGame(4);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5))
             {
                 UpdateGame(5);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.Alpha6))
             {
                 UpdateGame(6);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad7) || Input.GetKeyDown(KeyCode.Alpha7))
             {
                 UpdateGame(7);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad8) || Input.GetKeyDown(KeyCode.Alpha8))
             {
                 UpdateGame(8);
             }
+
             if (Input.GetKeyDown(KeyCode.Keypad9) || Input.GetKeyDown(KeyCode.Alpha9))
             {
                 UpdateGame(9);
@@ -97,12 +107,14 @@ public class HomeWork2 : MonoBehaviour
         count = 0;
         label.text = "Нажмите цифру от 1 до 9:\n";
     }
+
     public void UpdateGame(int a)
     {
         sum += a;
         label.text = "Нажмите цифру от 1 до 9:\n" + a + "\nСумма: " + sum;
         count++;
     }
+
     public void FinishGame()
     {
         label.text = "Игра окончена! Количество ходов: " + count +

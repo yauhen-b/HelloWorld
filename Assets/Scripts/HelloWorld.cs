@@ -12,7 +12,7 @@ public class HelloWorld : MonoBehaviour
     public int max;
     public int count;
     public int guess;
-    
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -27,15 +27,18 @@ public class HelloWorld : MonoBehaviour
             min = guess;
             UpdateGuess();
         }
+
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             max = guess;
             UpdateGuess();
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGuess();
         }
+
         if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             label.text = "Конец";
@@ -54,7 +57,7 @@ public class HelloWorld : MonoBehaviour
         max = 1000;
         guess = (min + max) / 2;
         count = 0;
-        label.text = "Загадай число от " + min + " до " + max + 
+        label.text = "Загадай число от " + min + " до " + max +
                      "\n Твоё число равно " + guess + "?\n число попыток равно " + ++count;
     }
 }
